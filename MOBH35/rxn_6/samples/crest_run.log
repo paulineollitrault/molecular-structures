@@ -1,0 +1,49 @@
+[crest] running in /Users/ollitrault/Work/molecular-structures/MOBH35/rxn_6/samples/crest/r (TOML: etemp=1500.0, maxscc=1000)
+[crest] finished in 210s (exit 0)
+[crest] running in /Users/ollitrault/Work/molecular-structures/MOBH35/rxn_6/samples/crest/p (TOML: etemp=1500.0, maxscc=1000)
+[crest] finished in 218s (exit 0)
+[crest] running in /Users/ollitrault/Work/molecular-structures/MOBH35/rxn_6/samples/crest/ts (TOML: etemp=1500.0, maxscc=1000)
+[crest] finished in 148s (exit 0)
+[uma] loading uma-s-1p2 on cpu (first call ~3.5 min)...
+W0515 12:44:20.604000 47181 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[uma] loaded in 9.9s
+Traceback (most recent call last):
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 217, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 205, in main
+    evaluate_with_uma(
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 129, in evaluate_with_uma
+    raise RuntimeError(f"No conformer file at {any_path}")
+RuntimeError: No conformer file at /Users/ollitrault/Work/molecular-structures/MOBH35/rxn_6/samples/crest/r/crest_rotamers.xyz
+[uma] loading uma-s-1p2 on cpu (first call ~3.5 min)...
+W0515 12:45:56.085000 47610 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[uma] loaded in 8.5s
+Traceback (most recent call last):
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 228, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 216, in main
+    evaluate_with_uma(
+  File "/Users/ollitrault/Work/molecular-structures/MOBH35/sampling_code/run_crest_rxn6.py", line 136, in evaluate_with_uma
+    sample = read(any_path, index=0)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ollitrault/miniforge3/envs/tmc/lib/python3.12/site-packages/ase/io/formats.py", line 782, in read
+    io = get_ioformat(format)
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ollitrault/miniforge3/envs/tmc/lib/python3.12/site-packages/ase/io/formats.py", line 281, in get_ioformat
+    raise UnknownFileTypeError(name)
+ase.io.formats.UnknownFileTypeError: trj
+[uma] loading uma-s-1p2 on cpu (first call ~3.5 min)...
+W0515 12:47:00.952000 47737 site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[uma] loaded in 9.0s
+[uma] r: scoring 966 conformers...
+[uma] r done in 474.4s (total saves so far: 966)
+[uma] p: scoring 945 conformers...
+[uma] p done in 493.0s (total saves so far: 1911)
+[uma] ts: scoring 761 conformers...
+WARNING:root:PBCv2: graph generation encountered a very large box. The size of the cell is tensor([[[1., 0., 0.],
+         [0., 1., 0.],
+         [0., 0., 1.]]], requires_grad=True) and min/max positions are (tensor(-445.8625), tensor(603.1982)). Performance will be slower than optimal.
+[uma] ts done in 385.3s (total saves so far: 2672)
+[uma] wrote 2672 conformer records to /Users/ollitrault/Work/molecular-structures/MOBH35/rxn_6/samples/crest/conformers.h5

@@ -1,0 +1,11 @@
+input = "input.xyz"
+runtype = "imtd-gc"
+threads = 8
+
+[[calculation.level]]
+method = "tblite"
+tblite_level = "gfn2"
+chrg = 0
+uhf = 0
+etemp = 1500.0
+maxscc = 1000
